@@ -1,6 +1,6 @@
 import axios from 'axios'
-import { useRouter } from 'vue-router'
-const router = useRouter()
+// import { useRouter } from 'vue-router'
+// const router = useRouter()
 
 switch (import.meta.env.MODE) {
   case 'development':

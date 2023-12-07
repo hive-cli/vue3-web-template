@@ -21,5 +21,3 @@ const symbolId = computed(() => {
   return `#${preffix}-${icon}`
 })
 </script>
-
-<style scoped></style>

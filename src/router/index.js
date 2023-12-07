@@ -1,16 +1,16 @@
-import { createRouter, createWebHashHistory, createWebHistory } from 'vue-router'
+import { createRouter, createWebHashHistory } from 'vue-router'
 import { constantRoutes } from './routes'
 
 export const router = createRouter({
   history: createWebHashHistory(import.meta.env.VITE_BASE_URL),
   routes: constantRoutes,
   // 每次切换路由的时候滚动到页面顶部
-  scrollBehavior(to, from, savedPosition) {
+  scrollBehavior() {
     return { left: 0, top: 0 }
   }
 })
 
-const whiteList = ['/login']
+// const whiteList = ['/login']
 
 router.beforeEach((to, from, next) => {
   window.$loadingBar?.start()
